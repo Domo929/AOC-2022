@@ -1,9 +1,7 @@
 import java.io.File
 
-class Day1(path: String) {
-    private val lines: List<String> = File(path).readLines()
-
-    fun solve(): Pair<Int, Int> {
+class Day1(path: String): Day(path) {
+    override fun solve(): Pair<Int, Int> {
         val elves: MutableList<MutableList<Int>> = mutableListOf()
         var elf: MutableList<Int> = mutableListOf()
         for (line in lines) {
