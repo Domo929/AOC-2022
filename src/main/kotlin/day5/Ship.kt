@@ -7,8 +7,8 @@ class Ship(lines: List<String>) {
     init {
         val splitIndex = findSplitIndex(lines)
 
-        val crateLines = lines.subList(0, splitIndex-1)
-        val size = findSize(lines[splitIndex-1])
+        val crateLines = lines.subList(0, splitIndex - 1)
+        val size = findSize(lines[splitIndex - 1])
         makeCrates(size)
 
         val commandLines = lines.subList(splitIndex + 1, lines.size)
@@ -27,6 +27,7 @@ class Ship(lines: List<String>) {
         addCommands(commandLines)
     }
 
+    // UTILITY FUNCTIONS
     private fun findSplitIndex(lines: List<String>): Int {
         for ((index, line) in lines.withIndex()) {
             if (line == "") {
@@ -52,6 +53,12 @@ class Ship(lines: List<String>) {
         }
     }
 
+    private fun getTops(): String {
+        return crates.map { it.last() }.joinToString("")
+    }
+
+    // CRATE FUNCTIONS
+
     // Add crate to the top of the stack, physically impossible
     // but this is how we get the test input
     private fun addCrateTopToBottom(crate: Char, at: Int) {
@@ -63,6 +70,7 @@ class Ship(lines: List<String>) {
             crates[command.getTo() - 1].addLast(crates[command.getFrom() - 1].removeLast())
         }
     }
+
     private fun moveMultipleCrates(command: Command) {
         val toMove: MutableList<Char> = mutableListOf()
         for (i in 0 until command.getAmount()) {
@@ -74,25 +82,26 @@ class Ship(lines: List<String>) {
         }
     }
 
+    // COMMAND FUNCTIONS
+
     private fun addCommands(commandLines: List<String>) {
         for (line in commandLines) {
             commands.add(Command(line))
         }
     }
 
-    fun executePart1Commands(){
+    fun executePart1Commands(): String {
         for (command in commands) {
             moveSingleCrate(command)
         }
+
+        return getTops()
     }
 
-    fun executePart2Commands(){
+    fun executePart2Commands(): String {
         for (command in commands) {
             moveMultipleCrates(command)
         }
-    }
-
-    fun getTops(): String {
-        return crates.map { it.last() }.joinToString("")
+        return getTops()
     }
 }
