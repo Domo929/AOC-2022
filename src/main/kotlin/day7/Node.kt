@@ -1,6 +1,9 @@
 package day7
 
-abstract class Node(val name: String, val parent: Node?) {
+abstract class Node(
+    private val name: String,
+    private val parent: Node?
+) {
     protected val children = mutableListOf<Node>()
 
     abstract fun size(): Int

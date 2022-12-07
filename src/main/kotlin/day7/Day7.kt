@@ -19,21 +19,24 @@ class Day7(path: String) : Day(path) {
             val parts = line.split(" ")
             when (parts[0]) {
                 "$" -> {
-                    when(parts[1]) {
+                    when (parts[1]) {
                         "cd" -> {
                             current.cd(parts[2])?.let {
                                 current = it
                             } ?: throw Exception("No such directory")
                         }
+
                         "ls" -> {
                             // the else case will handle adding files to the current directory
                             continue
                         }
                     }
                 }
+
                 "dir" -> {
                     current.add(DirNode(parts[1], current))
                 }
+
                 else -> {
                     current.add(FileNode(parts[1], current, parts[0].toInt()))
                 }
@@ -46,7 +49,7 @@ class Day7(path: String) : Day(path) {
     private fun solvePart1(root: Node): Int {
         val dirs = root.getDirectories()
         var sum = 0
-        for(dir in dirs) {
+        for (dir in dirs) {
             val dirSize = dir.size()
             if (dirSize <= 100000) {
                 sum += dirSize

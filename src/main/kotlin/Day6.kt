@@ -1,7 +1,7 @@
-class Day6(path: String): Day(path) {
+class Day6(path: String) : Day(path) {
 
     override fun solve(): Pair<Any, Any> {
-        if(lines.size !=1) {
+        if (lines.size != 1) {
             throw Exception("Invalid input")
         }
 
@@ -9,8 +9,8 @@ class Day6(path: String): Day(path) {
     }
 
     private fun findNDistinct(line: String, n: Int): Int {
-        for(i in n until line.toList().size){
-            if (line.substring(i-n, i).toSet().size == n) {
+        for (i in n until line.toList().size) {
+            if (line.substring(i - n, i).toSet().size == n) {
                 return i
             }
         }

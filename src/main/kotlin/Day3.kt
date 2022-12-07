@@ -1,6 +1,7 @@
 class Day3(path: String) : Day(path) {
     private val letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     private val score: HashMap<Char, Int> = hashMapOf()
+
     init {
         for ((index, ch) in letters.iterator().withIndex()) {
             score[ch] = index + 1

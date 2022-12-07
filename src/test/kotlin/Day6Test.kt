@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.DisplayName
+import org.junit.jupiter.api.Test
 
 class Day6Test {
 
@@ -14,7 +14,7 @@ class Day6Test {
     }
 
     @Test
-    fun testReal(){
+    fun testReal() {
         Day6("src/test/resources/day6/input.txt").solve().let {
             println(it.first)
             println(it.second)

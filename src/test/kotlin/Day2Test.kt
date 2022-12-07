@@ -1,7 +1,6 @@
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.DisplayName
 
 class Day2Test {
 
@@ -14,7 +13,7 @@ class Day2Test {
     }
 
     @Test
-    fun testReal(){
+    fun testReal() {
         Day2("src/test/resources/day2/input.txt").solve().let {
             println(it.first)
             println(it.second)

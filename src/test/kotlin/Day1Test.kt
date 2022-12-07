@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
+import org.junit.jupiter.api.Test
 
 class Day1Test {
 
@@ -16,7 +15,7 @@ class Day1Test {
 
     @Test
     @DisplayName("Confirm it passes real data")
-    fun testReal(){
+    fun testReal() {
         Day1("src/test/resources/day1/input.txt").solve().let {
             println(it.first)
             println(it.second)
