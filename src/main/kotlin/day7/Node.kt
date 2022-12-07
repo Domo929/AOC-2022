@@ -5,7 +5,7 @@ abstract class Node(val name: String, val parent: Node?) {
 
     abstract fun size(): Int
 
-    fun add(node: Node) {
+    open fun add(node: Node) {
         children.add(node)
     }
 
