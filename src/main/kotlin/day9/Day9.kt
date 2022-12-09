@@ -1,3 +1,6 @@
+package day9
+
+import Day
 import kotlin.math.abs
 import kotlin.math.max
 

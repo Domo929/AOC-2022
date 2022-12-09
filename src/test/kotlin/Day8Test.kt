@@ -1,3 +1,4 @@
+import day8.Day8
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 

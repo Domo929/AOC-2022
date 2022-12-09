@@ -1,3 +1,7 @@
+package day1
+
+import Day
+
 class Day1(path: String) : Day(path) {
     override fun solve(): Pair<Int, Int> {
         val elves: MutableList<MutableList<Int>> = mutableListOf()

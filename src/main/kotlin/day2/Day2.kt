@@ -1,3 +1,7 @@
+package day2
+
+import Day
+
 class Day2(path: String) : Day(path) {
 
     // outcomes

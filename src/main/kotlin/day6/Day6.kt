@@ -1,3 +1,7 @@
+package day6
+
+import Day
+
 class Day6(path: String) : Day(path) {
 
     override fun solve(): Pair<Any, Any> {

@@ -1,3 +1,7 @@
+package day3
+
+import Day
+
 class Day3(path: String) : Day(path) {
     private val letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     private val score: HashMap<Char, Int> = hashMapOf()
