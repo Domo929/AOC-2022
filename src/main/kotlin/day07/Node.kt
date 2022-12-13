@@ -1,4 +1,4 @@
-package day7
+package day07
 
 abstract class Node(
     private val name: String,

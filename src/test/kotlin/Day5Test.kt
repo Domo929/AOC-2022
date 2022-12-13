@@ -1,4 +1,4 @@
-import day5.Day5
+import day05.Day5
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test

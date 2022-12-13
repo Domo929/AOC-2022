@@ -1,4 +1,4 @@
-package day5
+package day05
 
 class Command(line: String) {
     private var amount: Int = 0

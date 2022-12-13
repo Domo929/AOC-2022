@@ -1,4 +1,4 @@
-package day5
+package day05
 
 class Ship(lines: List<String>) {
     private val crates: MutableList<ArrayDeque<Char>> = mutableListOf()

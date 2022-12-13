@@ -1,4 +1,4 @@
-package day7
+package day07
 
 class DirNode(name: String, parent: Node?) : Node(name, parent) {
     override fun size(): Int {
